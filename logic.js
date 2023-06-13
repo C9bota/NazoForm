@@ -15,7 +15,7 @@ function JudgeAnswer(ans) {
         location.href = "./answerC.html";
     }
     else {
-        location.href = "./index.html"
+        location.href = "./wrong.html"
     }
 }
 
