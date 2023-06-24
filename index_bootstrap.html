@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <title>マオウ城からの脱出-お持ち帰り謎-</title>
+    <link rel="icon" href="http://kisou.info/favicon.ico">
+
+    <!-- ホーム画面用 -->
+    <link rel="apple-touch-icon" href="http://kisou.info/apple-touch-icon.png" sizes="180x180">
+
+    <!-- スタイル・フォント -->
+    <link rel="stylesheet" href="./css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!-- ロジック -->
+    <script src=./js/logic.js></script>
+
+</head>
+
+<body>
+    <!-- TODO ロゴを作る -->
+    <!-- ロゴ -->
+    <div class="container text-center py-4">
+        <h1><a href="https://c9bota.github.io/NazoForm/index.html"><img src="./img/logo.png" alt="マオウ城お持ち帰り謎"></a></h1>
+    </div>
+
+    <!-- メイン -->
+    <main>
+        <!-- 謎解き情報  -->
+        <div class="container text-center">
+            <br><br><br>
+            <h2>
+                回答入力フォーム
+            </h2>
+            <br><br><br>
+
+            <!-- 回答用フォーム -->
+            <form method="post" action="#" class="search-form-001">
+                <label>
+                    <input type="text" name="text" value="" placeholder="カタカナで入力">
+                </label>
+                <button name="button" type="submit" onclick="InputText(this.form);">送信</button>
+            </form>
+        </div>
+
+
+
+        <div class="py-4 bg-light">
+            <section id="history">
+                <div class="container">
+                    <!--カード-->
+                    <div class="row">
+                        <!-- ヒント1 -->
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body d-flex justify-content-between">
+                                    <h4 class="card-title">ヒント1</h4>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#modal01"> ヒントを見る
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ヒント2 -->
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body d-flex justify-content-between">
+                                    <h4 class="card-title">ヒント2</h4>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#modal02"> ヒントを見る
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ヒント3 -->
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body d-flex justify-content-between">
+                                    <h4 class="card-title">ヒント3</h4>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#modal03"> ヒントを見る
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/カード-->
+
+                    <!-- モーダル -->
+                    <!-- ヒント1 -->
+                    <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="modal01-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal01-label">Aのヒント</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                                            aria-hidden="true">×</span> </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">
+                                        ヒント<br>
+                                        ヒント<br>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">とじる</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ヒント2 -->
+                    <div class="modal fade" id="modal02" tabindex="-1" role="dialog" aria-labelledby="modal02-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal01-label">Bのヒント</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                                            aria-hidden="true">×</span> </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">
+                                        ヒントB<br>
+                                        ヒントB<br>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">とじる</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ヒント3 -->
+                    <div class="modal fade" id="modal03" tabindex="-1" role="dialog" aria-labelledby="modal03-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal01-label">Cのヒント</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                                            aria-hidden="true">×</span> </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">
+                                        ヒントC<br>
+                                        ヒントC<br>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">とじる</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- / モーダル -->
+                </div>
+            </section>
+        </div>
+        <!-- /コンテンツ04 -->
+
+
+
+    </main>
+    <!-- /メイン -->
+
+    <!-- フッター -->
+    <footer class="py-4 bg-dark text-light">
+        <div class="container text-center">
+            <p>
+                <small>Copyright ©2023 演劇ユニット「きそう」, All Rights Reserved.</small>
+            </p>
+        </div>
+    </footer>
+    <!-- /フッター -->
+
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/custom.js"></script>
+</body>
+<div id="forest-ext-shadow-host"></div>
+</body>
+
+</html>

@@ -5,17 +5,20 @@ function InputText(formdata) {
     sha256(input_text).then(hash => JudgeAnswer(hash));
 }
 function JudgeAnswer(ans) {
-    if (ans == "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd") {
+    if (ans == "b37e8ac766eda029fdbca8f1059a2f0de918e355f8618749eb08e854a9ba8c48") {
         location.href = "./answerA.html";
     }
-    else if (ans == "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c") {
+    else if (ans == "d05e85223cbfdadfed652729012c4068752705f5e46c5e9179da3352fd4a4c86") {
         location.href = "./answerB.html";
     }
-    else if (ans == "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d") {
+    else if (ans == "4a3b3fdb51bb8d878603d69e5530d619ae91e157cc6019e92ab6ca81a6b84411") {
         location.href = "./answerC.html";
     }
+    else if (ans == "272035948829ea1a2624d6c61a7a8476be430f886d6e6ea92bde406ede574265") {
+        location.href = "./answerD.html";
+    }
     else {
-        location.href = "./wrong.html"
+        location.href = "./index.html"
     }
 }
 

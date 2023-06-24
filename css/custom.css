@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+/* ページ内リンクの位置調整 */
+section {
+  margin-top: 0px;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-pic {
+  margin-top: -8px;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pic {
+  background-position: center;
+  width: 95%;
+  height: 95%;
+}
+
+/* フォント */
+p {
+  font-family: "M PLUS 1c";
+  font-size: 22px;
+}
+
+.font-aisatu {
+  font-family: "M PLUS Rounded 1c";
+  font-size: 24px;
+}
+
+/* 背景テンプレ */
+.bg-sea {
+  /* background-color: aqua; */
+  /* background: linear-gradient(#0420BF, #8CF3D8); */
+  /* background-color: #0093E9;
+  background-image: linear-gradient(164deg, #0093E9 11%, #8cf3d8 100%); */
+  background-color: #25c9f0;
+  background-image: linear-gradient(180deg, #25c9f0 11%, #81f4d5 100%);
+}
+
+.text-sea {
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro W3", Courier New, sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.bg-sand {
+  /* background-color: bisque; */
+  /* background: linear-gradient(#F4DFC2, #e0cdb2); */
+  /* background-color: #f6eddc;
+background-image: linear-gradient(180deg, #f6eddc 30%, #fbbb88 100%); */
+  background-color: #fdbd88;
+  background-image: linear-gradient(176deg, #fdbd88 0%, #f7686a 100%);
+
+}
+
+.text-sand {
+  color: #e7e5dc;
+}
+
+/* ナビゲーションバーの外枠を消す */
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn4 {
+  position: relative;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  background: #30313a;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn4 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 5px;
+  background: #fff;
+  width: 45%;
+}
+
+
+.openbtn4 span:nth-of-type(1) {
+  top: 13px;
+}
+
+.openbtn4 span:nth-of-type(2) {
+  top: 19px;
+}
+
+.openbtn4 span:nth-of-type(3) {
+  top: 25px;
+}
+
+.openbtn4 span:nth-of-type(3)::after {
+  content: "Menu";
+  /*3つ目の要素のafterにMenu表示を指定*/
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+.openbtn4.active span:nth-of-type(1) {
+  top: 14px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn4.active span:nth-of-type(3) {
+  top: 26px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(3)::after {
+  content: "Close";
+  /*3つ目の要素のafterにClose表示を指定*/
+  transform: translateY(0) rotate(-45deg);
+  top: 5px;
+  left: 4px;
+}
+
+h2 {
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2::before,
+h2::after {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  content: '';
+}
+
+h2::before {
+  border-left: solid 3px;
+  border-top: solid 3px;
+  border-radius: 5px 0 0 0;
+  top: 0;
+  left: 0;
+}
+
+h2::after {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+  border-radius: 0 0 5px 0;
+  bottom: 0;
+  right: 0;
+}
+
+h3 {
+  position: relative;
+  padding: 1rem 0.25rem;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+/* box */
+.box7 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #474747;
+  background: whitesmoke;
+  /*背景色*/
+  border-left: double 7px #4ec4d3;
+  /*左線*/
+  border-right: double 7px #4ec4d3;
+  /*右線*/
+}
+
+.box7 p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* button */
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1.0em 2.0em;
+  text-decoration: none;
+  color: #00BCD4;
+  background: #ECECEC;
+  transition: .4s;
+}
+
+.btn-flat-simple a {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.btn-flat-simple:hover {
+  background: #00bcd4;
+  color: white;
+}
+
+.btn-flat-simple-tweet {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1.0em 2.0em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #00BCD4;
+  transition: .4s;
+}
+
+.btn-flat-simple-tweet a {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.btn-flat-simple-tweet:hover {
+  background: white;
+  color: #00bcd4;
+}
+
+.btn-flat-simple-nazo {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1.0em 2.0em;
+  text-decoration: none;
+  color: #e78721;
+  background: #2f2725;
+  transition: .4s;
+}
+
+.btn-flat-simple-nazo a {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.btn-flat-simple-nazo:hover {
+  background: #e78721;
+  color: #2f2725;
+}
+
+/*回答入力フォーム*/
+.search-form-002 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #d3631e;
+  border-radius: 25px;
+}
+
+.search-form-002 input {
+  width: 350px;
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-form-002 input::placeholder {
+  align-items: center;
+  color: #00758f;
+}
+
+.search-form-002 button {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: #d3631e;
+  cursor: pointer;
+}
+
+.search-form-002 button::after {
+  width: 20px;
+  height: 20px;
+  /* background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23fff%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E');
+  background-repeat: no-repeat; */
+  content: '';
+}
+
+.search-form-001 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 5px solid #d3631e;
+  border-radius: 10px;
+}
+
+.search-form-001 input {
+  width: 250px;
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-form-001 input::placeholder {
+  color: #2f2725;
+}
+
+.search-form-001 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 60px;
+  border: none;
+  background-color: #d3631e;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+
+.search-form-001 button::after {
+  width: 0px;
+  height: 0px;
+  /* background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23fff%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E'); */
+  background-repeat: no-repeat;
+  content: '';
+}
+
+/* 外枠に設定する class */
+.img_outer {
+  position: relative;
+  width: 480px;
+  /* 領域の幅を指定 */
+  height: 120px;
+  /* 領域の高さを指定 */
+  margin: 1em 0;
+  border: 1px solid #2f2725;
+  background-color: #2f2725;
+}
+
+/* 画像に対して指定する class */
+.inner_photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
