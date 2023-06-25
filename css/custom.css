@@ -360,12 +360,12 @@ h3 {
 /* 外枠に設定する class */
 .img_outer {
   position: relative;
-  width: 480px;
+  width: auto;
   /* 領域の幅を指定 */
   height: 120px;
-  /* 領域の高さを指定 */
-  margin: 1em 0;
-  border: 1px solid #2f2725;
+
+  text-align: center;
+
   background-color: #2f2725;
 }
 
